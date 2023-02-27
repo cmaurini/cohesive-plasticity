@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<Xdmf Version="3.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <Domain>
+    <Grid Name="rectangle" GridType="Uniform">
+      <Topology TopologyType="Triangle" NumberOfElements="766" NodesPerElement="3">
+        <DataItem Dimensions="766 3" NumberType="Int" Format="HDF">plasticity-crack.h5:/Mesh/rectangle/topology</DataItem>
+      </Topology>
+      <Geometry GeometryType="XY">
+        <DataItem Dimensions="413 2" Format="HDF">plasticity-crack.h5:/Mesh/rectangle/geometry</DataItem>
+      </Geometry>
+    </Grid>
+    <Grid Name="u" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/0</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.1111111111111111" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/0_1111111111111111</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.22222222222222221" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/0_22222222222222221</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.33333333333333331" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/0_33333333333333331</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.44444444444444442" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/0_44444444444444442</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.55555555555555558" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/0_55555555555555558</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.66666666666666663" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/0_66666666666666663</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.77777777777777768" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/0_77777777777777768</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.88888888888888884" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/0_88888888888888884</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="u" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="1" />
+        <Attribute Name="u" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="413 1" Format="HDF">plasticity-crack.h5:/Function/u/1</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid Name="epsp" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/0</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.1111111111111111" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/0_1111111111111111</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.22222222222222221" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/0_22222222222222221</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.33333333333333331" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/0_33333333333333331</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.44444444444444442" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/0_44444444444444442</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.55555555555555558" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/0_55555555555555558</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.66666666666666663" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/0_66666666666666663</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.77777777777777768" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/0_77777777777777768</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.88888888888888884" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/0_88888888888888884</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="epsp" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="1" />
+        <Attribute Name="epsp" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/epsp/1</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid Name="p" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/0</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.1111111111111111" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/0_1111111111111111</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.22222222222222221" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/0_22222222222222221</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.33333333333333331" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/0_33333333333333331</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.44444444444444442" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/0_44444444444444442</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.55555555555555558" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/0_55555555555555558</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.66666666666666663" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/0_66666666666666663</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.77777777777777768" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/0_77777777777777768</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.88888888888888884" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/0_88888888888888884</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="p" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="1" />
+        <Attribute Name="p" AttributeType="Scalar" Center="Cell">
+          <DataItem Dimensions="766 1" Format="HDF">plasticity-crack.h5:/Function/p/1</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+    <Grid Name="stress" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/0</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.1111111111111111" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/0_1111111111111111</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.22222222222222221" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/0_22222222222222221</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.33333333333333331" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/0_33333333333333331</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.44444444444444442" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/0_44444444444444442</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.55555555555555558" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/0_55555555555555558</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.66666666666666663" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/0_66666666666666663</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.77777777777777768" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/0_77777777777777768</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="0.88888888888888884" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/0_88888888888888884</DataItem>
+        </Attribute>
+      </Grid>
+      <Grid Name="stress" GridType="Uniform">
+        <xi:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])" />
+        <Time Value="1" />
+        <Attribute Name="stress" AttributeType="Vector" Center="Cell">
+          <DataItem Dimensions="766 3" Format="HDF">plasticity-crack.h5:/Function/stress/1</DataItem>
+        </Attribute>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>

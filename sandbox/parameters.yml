@@ -1,0 +1,99 @@
+# === Loading === #
+loading: 
+    ud_min: 0.
+    ud_max: 2.
+    n_steps: 50
+    
+#  === Geometry === #
+geometry:
+    geometric_dimension: 2
+    geom_type: "bar" 
+    H: 0.37.
+    L: 2.
+
+#  === Model === #
+model:
+    E: 2.998
+    nu: 0.9946574 #0.98 # 0.99 # 946574
+    w1: 100. #1 #48.6487112
+    ell: 0.05
+    k_res: 1.e-8
+    model_dimension: 2
+    model_type: "2D" #could be "2D"/ "plane-strain"
+
+# === Solver === #
+solvers: 
+    elasticity:
+        prefix: elasticity
+        snes:
+            snes_type: vinewtonrsls
+            snes_linesearch_type: basic
+            snes_stol: 0. 
+            snes_atol: 1e-8 
+            snes_rtol: 1e-8  
+            snes_max_it: 100 
+            snes_monitor: "" 
+            # pc_type: "gamg"
+            # ksp_type: "cg"
+            #ksp_rtol: 1.0e-12
+            #mg_levels_ksp_type: "chebyshev"
+            #mg_levels_pc_type: "jacobi"
+            #mg_levels_esteig_ksp_type: "cg"
+            #mg_levels_ksp_chebyshev_esteig_steps: 20
+            # ksp_type: preonly
+            # pc_type: lu
+            # pc_factor_mat_solver_type: mumps
+
+
+    # Damage solver parameters
+    damage:
+        type: TAO
+        prefix: damage
+        snes:
+            # Options in the case of SNES solver
+            snes_type: vinewtonrsls
+            snes_linesearch_type: basic
+            ksp_type: preonly
+            pc_type: lu
+            pc_factor_mat_solver_type: mumps
+            snes_atol: 1.0e-08
+            snes_rtol: 1.0e-09
+            snes_stol: 0.0 
+            snes_max_it: 500
+            #snes_divergence_tolerance: -1.0
+            snes_monitor: ""
+        tao:
+            # Options in the case of TAO solver
+            tao_type: tron
+            tao_gpcg_maxpgits: 50
+            tao_max_it: 100
+            tao_steptol: 1.0e-7
+            tao_gatol: 1.0e-8
+            tao_grtol: 1.0e-8
+            tao_gttol: 1.0e-8
+            tao_catol: 0.
+            tao_crtol: 0.
+            tao_ls_ftol: 1e-5
+            tao_ls_gtol: 1e-5
+            tao_ls_rtol: 1e-5
+            ksp_rtol: 1e-6
+            tao_ls_stepmin: 1e-8
+            tao_ls_stepmax: 1e6
+            #pc_type: lu
+            tao_monitor: ""
+            # tao_view: ""
+            #ksp_monitor: ""
+    
+    # Damage Elasticity Solver parameters
+    damage_elasticity:
+        max_it: 10000
+        alpha_tol: 1.0e-5
+        residual_u_tol: 1.0e-4
+        energy_atol: 1.0e-6
+        energy_rtol: 1.0e-6
+        criterion: 'energy'
+        error_on_nonconvergence: False
+
+
+
+
